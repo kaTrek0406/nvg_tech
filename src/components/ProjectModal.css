@@ -1,0 +1,228 @@
+/* ============================= */
+/*           OVERLAY             */
+/* ============================= */
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(circle, #7a33ff40 0%, transparent 70%);
+  backdrop-filter: blur(15px);
+
+  z-index: 10001;
+}
+
+/* ============================= */
+/*          CONTAINER            */
+/* ============================= */
+.project-modal-container {
+  width: 100%;
+  max-width: 820px;
+  max-height: 85vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================= */
+/*          MODAL BOX            */
+/* ============================= */
+.project-modal {
+  background: rgba(10, 0, 20, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  /* ключ для отсутствия скролла */
+  height: 100%;
+}
+
+/* ============================= */
+/*             HEADER            */
+/* ============================= */
+.project-modal__header {
+  padding: 18px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-modal__tag {
+  padding: 4px 12px;
+  background: rgba(122, 51, 255, 0.25);
+  border-radius: 10px;
+
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--glow);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.project-modal__close {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+  color: var(--text);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.25s;
+}
+
+.project-modal__close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: rotate(90deg);
+}
+
+/* ============================= */
+/*              IMAGE            */
+/* ============================= */
+.project-modal__image {
+  width: 100%;
+  aspect-ratio: 16/7; /* уменьшили высоту */
+  overflow: hidden;
+}
+
+.project-modal__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================= */
+/*             CONTENT           */
+/* ============================= */
+.project-modal__content {
+  padding: 24px 26px;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-modal__title {
+  font-size: 26px;
+  color: var(--text);
+  margin: 0;
+}
+
+.project-modal__description {
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+/* ============================= */
+/*           TECH STACK          */
+/* ============================= */
+.project-modal__tech h3 {
+  font-size: 15px;
+  color: var(--glow);
+  margin-bottom: 10px;
+}
+
+.project-modal__tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  padding: 6px 12px;
+  font-size: 13px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+/* ============================= */
+/*            FEATURES           */
+/* ============================= */
+.project-modal__features h3 {
+  font-size: 15px;
+  color: var(--glow);
+  margin-bottom: 8px;
+}
+
+.project-modal__features ul {
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 20px;
+}
+
+.project-modal__features li {
+  list-style: none;
+  font-size: 14px;
+  color: var(--text-dim);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-modal__features li svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--success);
+}
+
+/* desktop — 3 колонки */
+@media (min-width: 1200px) {
+  .project-modal__features ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================= */
+/*             ACTIONS           */
+/* ============================= */
+.project-modal__actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 10px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-modal__actions .btn {
+  font-size: 14px;
+  padding: 10px 18px;
+}
+
+/* ============================= */
+/*            RESPONSIVE         */
+/* ============================= */
+@media (max-width: 767px) {
+  .project-modal-container {
+    max-height: 92vh;
+  }
+
+  .project-modal__title {
+    font-size: 22px;
+  }
+
+  .project-modal__features ul {
+    grid-template-columns: 1fr;
+  }
+}

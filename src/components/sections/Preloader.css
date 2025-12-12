@@ -1,0 +1,84 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  will-change: opacity;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.preloader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.preloader__logo svg {
+  filter: drop-shadow(0 0 24px rgba(203, 163, 255, 0.6));
+}
+
+.preloader__progress-container {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #7A33FF, #9F6AFF, #CBA3FF);
+  border-radius: 2px;
+  box-shadow: 0 0 16px rgba(203, 163, 255, 0.8),
+              0 0 32px rgba(122, 51, 255, 0.4);
+  position: relative;
+}
+
+.preloader__progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6));
+  animation: shine 1.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.preloader__percentage {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--glow);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 767px) {
+  .preloader__progress-container {
+    width: 240px;
+  }
+  
+  .preloader__logo svg {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -1,0 +1,227 @@
+.pricing-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.pricing-modal {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  padding: 48px 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), var(--shadow-glow);
+}
+
+.pricing-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all var(--t-200);
+}
+
+.pricing-modal__close:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  transform: rotate(90deg);
+}
+
+.pricing-modal__title {
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--glow), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pricing-modal__plan-badge {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin: 0 auto 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(122, 51, 255, 0.3);
+}
+
+.pricing-modal__subtitle {
+  color: var(--text-dim);
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+.pricing-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pricing-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pricing-modal__field input {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 15px;
+  transition: all var(--t-200);
+  font-family: inherit;
+}
+
+.pricing-modal__field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(122, 51, 255, 0.1);
+}
+
+.pricing-modal__field input.error {
+  border-color: var(--danger);
+}
+
+.pricing-modal__field input::placeholder {
+  color: var(--text-dim);
+}
+
+.pricing-modal__field input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pricing-modal__error {
+  color: var(--danger);
+  font-size: 13px;
+  padding-left: 4px;
+}
+
+.pricing-modal__error-banner {
+  padding: 14px 18px;
+  background: rgba(255, 82, 82, 0.1);
+  border: 1px solid rgba(255, 82, 82, 0.3);
+  border-radius: 12px;
+  color: var(--danger);
+  font-size: 14px;
+  text-align: center;
+}
+
+.pricing-modal__footer {
+  color: var(--text-dim);
+  font-size: 13px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.pricing-modal__success {
+  text-align: center;
+  padding: 20px;
+}
+
+.pricing-modal__success-icon {
+  margin: 0 auto 24px;
+  width: 64px;
+  height: 64px;
+  animation: successPulse 0.6s ease-out;
+}
+
+.pricing-modal__success h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: var(--success);
+}
+
+.pricing-modal__success p {
+  color: var(--text-dim);
+  font-size: 16px;
+}
+
+.pricing-modal .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.pricing-modal .spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-modal {
+    padding: 32px 24px;
+    max-width: 100%;
+  }
+
+  .pricing-modal__title {
+    font-size: 26px;
+  }
+
+  .pricing-modal__subtitle {
+    font-size: 14px;
+  }
+
+  .pricing-modal__field input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

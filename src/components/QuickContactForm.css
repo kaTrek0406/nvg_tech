@@ -1,0 +1,490 @@
+.quick-contact-form {
+  position: absolute;
+  top: calc(100% + 16px);
+  right: 0;
+  width: 320px;
+  background: rgba(10, 0, 20, 0.98);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(122, 51, 255, 0.3);
+  z-index: 10000;
+}
+
+/* Стрелка вверх */
+.quick-contact-form__arrow {
+  position: absolute;
+  top: -8px;
+  right: 24px;
+  width: 16px;
+  height: 16px;
+  background: rgba(10, 0, 20, 0.98);
+  border-left: 1px solid var(--border-hover);
+  border-top: 1px solid var(--border-hover);
+  transform: rotate(45deg);
+}
+
+/* Header */
+.quick-contact-form__header {
+  margin-bottom: 20px;
+}
+
+.quick-contact-form__header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.quick-contact-form__header p {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* Form */
+.quick-contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quick-contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quick-contact-form__field input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  transition: all var(--t-300);
+}
+
+.quick-contact-form__field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 12px rgba(122, 51, 255, 0.2);
+}
+
+.quick-contact-form__field input.error {
+  border-color: var(--error);
+}
+
+.quick-contact-form__field input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quick-contact-form__field input::placeholder {
+  color: var(--text-muted);
+}
+
+.quick-contact-form__error {
+  font-size: 12px;
+  color: var(--error);
+  margin-top: 4px;
+}
+
+.quick-contact-form__form .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.quick-contact-form__form .btn svg {
+  transition: transform var(--t-200);
+}
+
+.quick-contact-form__form .btn:hover svg {
+  transform: translateX(2px);
+}
+
+/* Status */
+.quick-contact-form__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.quick-contact-form__status.error {
+  background: rgba(255, 79, 129, 0.1);
+  border: 1px solid rgba(255, 79, 129, 0.3);
+  color: var(--error);
+}
+
+/* Success State */
+.quick-contact-form__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  gap: 16px;
+}
+
+.quick-contact-form__success svg {
+  color: var(--success);
+}
+
+.quick-contact-form__success h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.quick-contact-form__success p {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* Footer */
+.quick-contact-form__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.quick-contact-form__footer svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--text);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Кнопка закрытия для мобильных */
+.quick-contact-form__close {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--t-200);
+  z-index: 10;
+  padding: 0;
+}
+
+.quick-contact-form__close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.quick-contact-form__close svg {
+  width: 16px;
+  height: 16px;
+  color: var(--text);
+}
+
+/* Overlay для мобильных */
+.quick-contact-overlay {
+  display: none;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Desktop Large (1200px+) */
+@media (min-width: 1200px) {
+  .quick-contact-form {
+    width: 360px;
+  }
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .quick-contact-form {
+    width: 340px;
+    padding: 20px;
+  }
+
+  .quick-contact-form__arrow {
+    right: 20px;
+  }
+}
+
+/* Mobile (до 768px) - полноэкранная форма */
+@media (max-width: 768px) {
+  .quick-contact-form {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    height: calc(100vh - 72px);
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--border-hover);
+    padding: 24px 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    animation: slideUpMobile 0.3s ease-out;
+    z-index: 25000 !important;
+  }
+
+  /* Убираем стрелку на мобильных */
+  .quick-contact-form__arrow {
+    display: none;
+  }
+
+  /* Показываем кнопку закрытия */
+  .quick-contact-form__close {
+    display: flex;
+  }
+
+  /* Показываем overlay */
+  .quick-contact-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 24000 !important;
+  }
+
+  /* Адаптируем header */
+  .quick-contact-form__header {
+    margin-bottom: 24px;
+    padding-right: 40px; /* Отступ для кнопки закрытия */
+  }
+
+  .quick-contact-form__header h3 {
+    font-size: 20px;
+  }
+
+  .quick-contact-form__header p {
+    font-size: 14px;
+  }
+
+  /* Увеличиваем поля ввода */
+  .quick-contact-form__field input {
+    padding: 14px 16px;
+    font-size: 16px; /* Предотвращаем zoom на iOS */
+  }
+
+  /* Увеличиваем кнопку */
+  .quick-contact-form__form .btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile (до 480px) */
+@media (max-width: 480px) {
+  .quick-contact-form {
+    padding: 20px 16px;
+  }
+
+  .quick-contact-form__header {
+    margin-bottom: 20px;
+  }
+
+  .quick-contact-form__header h3 {
+    font-size: 18px;
+  }
+
+  .quick-contact-form__form {
+    gap: 14px;
+  }
+
+  .quick-contact-form__footer {
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Extra Small Mobile (до 360px) */
+@media (max-width: 360px) {
+  .quick-contact-form {
+    padding: 16px 12px;
+  }
+
+  .quick-contact-form__header h3 {
+    font-size: 17px;
+  }
+
+  .quick-contact-form__header p {
+    font-size: 13px;
+  }
+
+  .quick-contact-form__field input {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .quick-contact-form__form .btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .quick-contact-form__close {
+    width: 28px;
+    height: 28px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .quick-contact-form__close svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Landscape orientation для мобильных */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 768px) {
+  .quick-contact-form {
+    padding: 16px 20px;
+    overflow-y: auto;
+  }
+
+  .quick-contact-form__header {
+    margin-bottom: 16px;
+  }
+
+  .quick-contact-form__header h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .quick-contact-form__header p {
+    font-size: 12px;
+  }
+
+  .quick-contact-form__form {
+    gap: 12px;
+  }
+
+  .quick-contact-form__field input {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .quick-contact-form__form .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .quick-contact-form__footer {
+    margin-top: 12px;
+    padding-top: 12px;
+    font-size: 11px;
+  }
+
+  .quick-contact-form__success {
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .quick-contact-form__success svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .quick-contact-form__success h3 {
+    font-size: 16px;
+  }
+
+  .quick-contact-form__success p {
+    font-size: 13px;
+  }
+}
+
+/* Адаптация для scrolled header */
+@media (max-width: 768px) {
+  .header--scrolled ~ * .quick-contact-form,
+  body.header-scrolled .quick-contact-form {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+}
+
+/* Анимация для мобильных */
+@keyframes slideUpMobile {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fix для iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    .quick-contact-form {
+      position: fixed;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}
+
+/* Accessibility - фокус */
+.quick-contact-form:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-contact-form {
+    animation: none;
+  }
+
+  .quick-contact-form__form .btn svg {
+    transition: none;
+  }
+
+  .spinner {
+    animation: none;
+  }
+}

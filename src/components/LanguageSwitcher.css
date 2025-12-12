@@ -1,0 +1,126 @@
+.language-switcher {
+  position: relative;
+  z-index: 100;
+}
+
+.language-switcher-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary, #ffffff);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.language-switcher-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-switcher-btn .flag {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.language-switcher-btn .lang-code {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.language-switcher-btn .chevron {
+  transition: transform 0.3s ease;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.language-switcher-btn .chevron.open {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 160px;
+  background: rgba(10, 10, 20, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-primary, #ffffff);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.language-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.language-option.active {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+}
+
+.language-option .flag {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.language-option .lang-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.language-option .check-icon {
+  color: #818cf8;
+  margin-left: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .language-switcher-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .language-switcher-btn .lang-code {
+    display: none;
+  }
+
+  .language-dropdown {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,439 @@
+/* ================================================
+   NVG Landing — Global Styles & Design System
+   Dark Neon Cyber Minimalism Theme
+   ================================================ */
+
+/* === CSS Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Design Tokens === */
+:root {
+  /* Colors */
+  --bg: #0A0014;
+  --bg-elevated: #110022;
+  --accent: #7A33FF;
+  --accent-2: #9F6AFF;
+  --glow: #CBA3FF;
+  --text: #EDEDED;
+  --text-dim: #BBBBBB;
+  --text-muted: #888888;
+  --error: #FF4F81;
+  --success: #2AE6B8;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(203, 163, 255, 0.35);
+
+  /* Radii */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+
+  /* Shadows & Glows */
+  --shadow-glow: 0 0 24px rgba(203, 163, 255, 0.35), 0 0 64px rgba(122, 51, 255, 0.25);
+  --shadow-glow-strong: 0 0 32px rgba(203, 163, 255, 0.5), 0 0 96px rgba(122, 51, 255, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Transitions */
+  --easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --t-100: 0.1s var(--easing);
+  --t-200: 0.2s var(--easing);
+  --t-300: 0.3s var(--easing);
+  --t-500: 0.5s var(--easing);
+
+  /* Spacing */
+  --spacing-section: 100px;
+  --spacing-container: 6vw;
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --spacing-section: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --spacing-section: 48px;
+    --spacing-container: 5vw;
+  }
+}
+
+/* === Base Styles === */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(40px, 7vw, 84px);
+  text-shadow: 0 0 16px var(--glow);
+}
+
+h2 {
+  font-size: clamp(32px, 5vw, 64px);
+}
+
+h3 {
+  font-size: clamp(24px, 3.5vw, 42px);
+}
+
+p {
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+.subtitle {
+  font-size: clamp(18px, 3vw, 24px);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.4;
+}
+
+/* === Layout === */
+.container {
+  max-width: 1200px;
+  padding-inline: var(--spacing-container);
+  margin-inline: auto;
+}
+
+section {
+  padding-block: var(--spacing-section);
+  position: relative;
+}
+
+/* === Glass Morphism === */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-glow);
+  transition: all var(--t-300);
+  will-change: transform, border-color, box-shadow;
+}
+
+.glass:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow-strong);
+}
+
+/* Disable blur on mobile for performance */
+@media (max-width: 767px) {
+  .glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
+
+/* === Buttons === */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--r-md);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--t-300);
+  border: none;
+  overflow: hidden;
+}
+
+.btn--primary {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(122, 51, 255, 0.4) inset, var(--shadow-glow);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px rgba(122, 51, 255, 0.6) inset, var(--shadow-glow-strong);
+}
+
+.btn--primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn--secondary {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* === Form Elements === */
+input,
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  transition: all var(--t-300);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(203, 163, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(203, 163, 255, 0.15);
+}
+
+input.error,
+textarea.error {
+  border-color: var(--error);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.error-message {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--error);
+}
+
+.success-message {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--success);
+}
+
+/* === Grid Utilities === */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 767px) {
+  .grid-auto {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* === Card === */
+.card {
+  position: relative;
+  padding: 28px;
+  border-radius: var(--r-lg);
+  transition: all var(--t-300);
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* === Animations === */
+/* Use transform and opacity for better performance */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translateZ(0);
+  }
+  to {
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: var(--shadow-glow);
+  }
+  50% {
+    box-shadow: var(--shadow-glow-strong);
+  }
+}
+
+/* Hardware acceleration для smooth анимаций */
+.card,
+.btn,
+.glass {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+
+/* === Accessibility === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* === Loading Spinner === */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: rotate 0.8s linear infinite;
+}
+
+/* === Scroll to Top Button === */
+.scroll-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--t-300);
+  z-index: 1000;
+  box-shadow: var(--shadow-glow);
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-strong);
+}
+
+/* === Utility Classes === */
+.text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}

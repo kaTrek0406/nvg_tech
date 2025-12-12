@@ -1,0 +1,111 @@
+.portfolio {
+  background: var(--bg);
+}
+
+.portfolio__title {
+  margin-bottom: 16px;
+}
+
+.portfolio__subtitle {
+  margin-bottom: 64px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.portfolio__grid {
+  gap: 32px;
+}
+
+.portfolio-card {
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--t-300);
+  background: rgba(10, 0, 20, 0.9);
+  border-radius: 16px;
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  flex-shrink: 0;
+}
+
+.portfolio-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-500);
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.portfolio-card:hover .portfolio-card__image img {
+  transform: scale(1.1);
+}
+
+.portfolio-card:active {
+  transform: scale(0.98);
+}
+
+.portfolio-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 0, 20, 0.9), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity var(--t-300);
+}
+
+.portfolio-card:hover .portfolio-card__overlay {
+  opacity: 1;
+}
+
+.portfolio-card__cta {
+  color: var(--glow);
+  font-weight: 600;
+  text-shadow: 0 0 12px var(--glow);
+}
+
+.portfolio-card__content {
+  padding: 0 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portfolio-card__tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(122, 51, 255, 0.2);
+  color: var(--glow);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.portfolio-card__title {
+  font-size: 20px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .portfolio__grid {
+    gap: 24px;
+  }
+}

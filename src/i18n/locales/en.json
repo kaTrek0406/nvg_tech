@@ -1,0 +1,311 @@
+{
+  "header": {
+    "services": "Services",
+    "process": "Process",
+    "portfolio": " Projects",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "startProject": "Start project",
+    "startYourProject": "Start your project"
+  },
+  "hero": {
+    "title": "We build digital solutions that help your business grow",
+    "subtitle": "Landing pages, bots and CRM systems that work fast, simple and effectively.",
+    "bookCall": "Free consultation",
+    "viewCases": "Cases",
+    "projects": "Projects",
+    "leads": "Leads",
+    "rating": "Rating"
+  },
+  "logoTarget": {
+    "hintIdle": "Aim and hold",
+    "hintActive": "Loading… {{progress}}%"
+  },
+  "services": {
+    "title": "What we do",
+    "subtitle": "No noise — just results",
+    "items": [
+      {
+        "title": "Automation",
+        "description": "Bots, integrations and workflows that save time."
+      },
+      {
+        "title": "Landing Pages",
+        "description": "Fast, clean and user-friendly pages."
+      },
+      {
+        "title": "Digital Tools",
+        "description": "CRM systems and dashboards for your business."
+      }
+    ]
+  },
+  "quickForm": {
+    "title": "Quick request",
+    "subtitle": "We'll contact you within 5 minutes",
+    "namePlaceholder": "Name",
+    "phonePlaceholder": "+373 XX XXX XXX",
+    "send": "Send",
+    "sending": "Sending…",
+    "sentTitle": "Sent",
+    "sentText": "We'll get back to you soon",
+    "errorText": "Error. Try again",
+    "footer": "We usually reply within 5 minutes",
+    "errors": {
+      "name": "Enter your name",
+      "phone": "Invalid phone number"
+    }
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "A simple path from idea to launch",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Call",
+        "description": "Understanding your goals.",
+        "duration": "30 min"
+      },
+      {
+        "number": "02",
+        "title": "Plan",
+        "description": "Preparing a proposal.",
+        "duration": "2 days"
+      },
+      {
+        "number": "03",
+        "title": "Development",
+        "description": "We build and show progress.",
+        "duration": "2–4 weeks"
+      },
+      {
+        "number": "04",
+        "title": "Launch",
+        "description": "Support and improvements.",
+        "duration": "Ongoing"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Projects",
+    "subtitle": "Solutions that work",
+    "cta": "View →",
+    "projects": [
+      {
+        "title": "Telegram Sales Bot",
+        "tag": "Automation",
+        "description": "A smart bot that collects leads, replies to clients and processes requests 24/7.",
+        "tech": ["Node.js", "Telegram API", "MongoDB", "Webhook"],
+        "features": [
+          "Lead collection",
+          "Scenario-based replies",
+          "CRM integration",
+          "Message analytics"
+        ]
+      },
+      {
+        "title": "Business Funnel Bot",
+        "tag": "Telegram Bot",
+        "description": "A full sales funnel inside Telegram: quizzes, lead capture, warming and notifications.",
+        "tech": ["Telegram API", "BotFather", "Node.js", "FastAPI"],
+        "features": [
+          "Quiz questions",
+          "Auto-replies",
+          "Manager notifications",
+          "Lead export"
+        ]
+      },
+      {
+        "title": "Service Landing Page",
+        "tag": "Landing Page",
+        "description": "A modern landing page with animation, fast loading and high conversion.",
+        "tech": ["React", "Next.js", "TailwindCSS", "Vercel"],
+        "features": [
+          "Fast loading",
+          "Responsive design",
+          "SEO optimization",
+          "Analytics integration"
+        ]
+      },
+      {
+        "title": "Corporate Website",
+        "tag": "Website",
+        "description": "A clean and structured website with pages, forms, blog and integrations.",
+        "tech": ["Next.js", "Node.js", "Firebase", "MUI"],
+        "features": [
+          "Multi-page structure",
+          "User dashboard",
+          "Request form",
+          "CMS content management"
+        ]
+      },
+      {
+        "title": "Targeted Advertising",
+        "tag": "Marketing",
+        "description": "Ad campaigns for Instagram, TikTok and Facebook with optimization.",
+        "tech": ["Meta Ads", "TikTok Ads", "Google Analytics", "Meta Pixel"],
+        "features": [
+          "Niche research",
+          "Campaign setup",
+          "A/B testing",
+          "Performance optimization"
+        ]
+      },
+      {
+        "title": "Mini CRM for Business",
+        "tag": "CRM",
+        "description": "A simple CRM for clients, orders and leads — everything in one place.",
+        "tech": ["React", "Node.js", "PostgreSQL", "Supabase"],
+        "features": [
+          "Client list",
+          "Status tracking",
+          "Reminders",
+          "Data export"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Trusted by clients",
+    "items": [
+      {
+        "name": "Ion Popescu",
+        "role": "CEO, TechCorp",
+        "avatar": "IP",
+        "rating": 5,
+        "text": "CRM helped increase efficiency and save time."
+      },
+      {
+        "name": "Maria Andronic",
+        "role": "Marketing Director, DataLabs",
+        "avatar": "MA",
+        "rating": 5,
+        "text": "Conversion grew 4×. Great work."
+      },
+      {
+        "name": "Andrei Cojocaru",
+        "role": "Founder, BizHub",
+        "avatar": "AC",
+        "rating": 5,
+        "text": "The bot handles almost all client requests."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Simple and transparent plans",
+    "button": "Choose",
+    "badge": "Best Choice",
+    "plans": [
+      {
+        "name": "Consultation",
+        "price": "Free",
+        "features": ["Video call", "Task evaluation", "Recommendations"]
+      },
+      {
+        "name": "Landing + Bot",
+        "price": "$300",
+        "features": [
+          "Landing page",
+          "Telegram bot, Instagram bot",
+          "CRM integration with your API",
+          "Responsive design",
+          "2 months of support"
+        ]
+      },
+      {
+        "name": "Website + CRM",
+        "price": "$600",
+        "features": [
+          "Multipage website (up to 5 pages)",
+          "CRM system, CRM integration with your API",
+          "Process automation",
+          "Analytics",
+          "6 months of support",
+          "Priority communication"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Quick answers",
+    "items": [
+      {
+        "question": "How long does a landing page take?",
+        "answer": "7–14 days depending on the task."
+      },
+      { "question": "Do you provide support?", "answer": "Yes, 3–12 months." },
+      {
+        "question": "Do you work with CRM?",
+        "answer": "Yes, if it has an API."
+      },
+      {
+        "question": "What tech do you use?",
+        "answer": "React, Next.js, Node.js, Python, Telegram API."
+      },
+      { "question": "Who owns the code?", "answer": "You — 100%." },
+      {
+        "question": "Can I update the project later?",
+        "answer": "Yes. Small changes are free."
+      },
+      { "question": "Do you do SEO?", "answer": "Yes, basic SEO is included." },
+      {
+        "question": "Do you work internationally?",
+        "answer": "Yes, worldwide."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Tell us about your project",
+    "labels": {
+      "name": "Name *",
+      "phone": "Phone *",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "phone": "+373 XX XXX XXX",
+      "message": "Project details..."
+    },
+    "errors": {
+      "name": "Enter your name",
+      "phone": "Invalid phone number",
+      "message": "Minimum 10 characters"
+    },
+    "button": {
+      "default": "Send",
+      "loading": "Sending…"
+    },
+    "status": {
+      "success": "Message sent!",
+      "error": "Error. Try later."
+    }
+  },
+  "outro": {
+    "tagline": "We create simple and smart digital solutions",
+    "contact": "Email: {{email}}"
+  },
+  "techOrbit": {
+    "title": "Technologies",
+    "subtitle": "We use the best"
+  },
+  "pricingModal": {
+    "title": "Send request",
+    "subtitle": "We will contact you soon",
+    "namePlaceholder": "Name",
+    "phonePlaceholder": "+373 XX XXX XXX",
+    "companyPlaceholder": "Company (optional)",
+    "send": "Send",
+    "sending": "Sending...",
+    "sentTitle": "Done",
+    "sentText": "We'll message you soon",
+    "errorText": "Error. Try again",
+    "footer": "Usually reply within an hour",
+    "errors": {
+      "name": "Enter your name",
+      "phone": "Invalid phone number"
+    }
+  }
+}

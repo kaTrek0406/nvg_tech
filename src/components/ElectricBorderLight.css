@@ -1,0 +1,80 @@
+.electric-border-light {
+  position: relative;
+  border-radius: 16px;
+  isolation: isolate;
+}
+
+.electric-border-light__glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: var(--electric-thickness, 2px);
+  background: linear-gradient(
+    90deg,
+    var(--electric-color),
+    transparent,
+    var(--electric-color)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: exclude;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.6;
+  animation: electric-slide var(--electric-speed, 3s) linear infinite;
+  will-change: background-position;
+}
+
+.electric-border-light__glow::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--electric-color),
+    transparent 60%
+  );
+  opacity: 0.3;
+  filter: blur(15px);
+  animation: electric-pulse calc(var(--electric-speed, 3s) * 0.5) ease-in-out infinite alternate;
+}
+
+.electric-border-light__content {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes electric-slide {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+@keyframes electric-pulse {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+/* Hover effect */
+.electric-border-light:hover .electric-border-light__glow {
+  opacity: 1;
+  animation-duration: calc(var(--electric-speed, 3s) * 0.5);
+}
+
+.electric-border-light:hover .electric-border-light__glow::before {
+  opacity: 0.5;
+}

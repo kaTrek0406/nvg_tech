@@ -1,0 +1,323 @@
+.tech-orbit {
+  padding: 8rem 0;
+  background: linear-gradient(180deg, rgba(17, 0, 34, 0.5) 0%, var(--bg) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-orbit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(122, 51, 255, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.tech-orbit__content {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-orbit__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-orbit__subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.tech-orbit__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center Core */
+.tech-orbit__core {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 40px rgba(122, 51, 255, 0.5);
+}
+
+.tech-orbit__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Orbit Rings */
+.tech-orbit__ring {
+  position: absolute;
+  border: 1px solid rgba(122, 51, 255, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: rotateRing 60s linear infinite;
+}
+
+.tech-orbit__ring:nth-child(2) {
+  animation-duration: 80s;
+  border-color: rgba(159, 106, 255, 0.15);
+}
+
+.tech-orbit__ring:nth-child(3) {
+  animation-duration: 100s;
+  border-color: rgba(122, 51, 255, 0.1);
+}
+
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Tech Items */
+.tech-orbit__item {
+  position: absolute;
+  transition: transform 0.05s linear;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.tech-orbit__item-inner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(17, 0, 34, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(122, 51, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tech-orbit__item:hover .tech-orbit__item-inner {
+  border-color: var(--tech-color);
+  box-shadow: 
+    0 0 30px var(--tech-color),
+    0 4px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(17, 0, 34, 0.95);
+}
+
+.tech-orbit__icon {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 8px rgba(122, 51, 255, 0.6));
+  transition: filter 0.3s ease;
+}
+
+.tech-orbit__item:hover .tech-orbit__icon {
+  filter: drop-shadow(0 0 15px var(--tech-color));
+}
+
+.tech-orbit__label {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(17, 0, 34, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(122, 51, 255, 0.3);
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+/* Particles */
+.tech-orbit__particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.tech-orbit__particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatParticle 5s ease-in-out infinite;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+@keyframes floatParticle {
+  0%, 100% { 
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: translateY(-50px) scale(1.5);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tech-orbit__wrapper {
+    max-width: 600px;
+    height: 600px;
+  }
+
+  .tech-orbit__core {
+    width: 100px;
+    height: 100px;
+  }
+
+.tech-orbit__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+  .tech-orbit__item-inner {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tech-orbit__icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-orbit {
+    padding: 5rem 0;
+  }
+
+  .tech-orbit__wrapper {
+    max-width: 450px;
+    height: 450px;
+  }
+
+  .tech-orbit__core {
+    width: 80px;
+    height: 80px;
+  }
+
+.tech-orbit__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+  .tech-orbit__item-inner {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tech-orbit__icon {
+    font-size: 1.3rem;
+  }
+
+  .tech-orbit__label {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-orbit__wrapper {
+    max-width: 350px;
+    height: 350px;
+  }
+
+  .tech-orbit__core {
+    width: 70px;
+    height: 70px;
+  }
+
+.tech-orbit__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+  .tech-orbit__item-inner {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tech-orbit__icon {
+    font-size: 1.1rem;
+  }
+
+  .tech-orbit__title {
+    font-size: 1.8rem;
+  }
+
+  .tech-orbit__subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+.tech-orbit__icon svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .tech-orbit__icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-orbit__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-orbit__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}

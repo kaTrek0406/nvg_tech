@@ -1,0 +1,302 @@
+{
+  "header": {
+    "services": "Servicii",
+    "process": "Proces",
+    "portfolio": "Proiecte",
+    "pricing": "Prețuri",
+    "faq": "FAQ",
+    "startProject": "Începe proiectul",
+    "startYourProject": "Începe proiectul tău"
+  },
+  "hero": {
+    "title": "Construim soluții digitale pentru creșterea afacerii tale",
+    "subtitle": "Landing pages, boți și CRM simple, rapide și eficiente.",
+    "bookCall": "Consultație gratuită",
+    "viewCases": "Cazuri",
+    "projects": "Proiecte",
+    "leads": "Lead-uri",
+    "rating": "Rating"
+  },
+  "logoTarget": {
+    "hintIdle": "Ține cursorul",
+    "hintActive": "Se încarcă… {{progress}}%"
+  },
+  "services": {
+    "title": "Ce facem",
+    "subtitle": "Fără zgomot — doar rezultat",
+    "items": [
+      {
+        "title": "Automatizare",
+        "description": "Boți, integrări și procese care economisesc timp."
+      },
+      {
+        "title": "Landing Pages",
+        "description": "Pagini rapide, curate și ușor de folosit."
+      },
+      {
+        "title": "Instrumente digitale",
+        "description": "CRM-uri și dashboard-uri pentru afacerea ta."
+      }
+    ]
+  },
+  "quickForm": {
+    "title": "Cerere rapidă",
+    "subtitle": "Vă contactăm în 5 minute",
+    "namePlaceholder": "Nume",
+    "phonePlaceholder": "+373 XX XXX XXX",
+    "send": "Trimite",
+    "sending": "Se trimite…",
+    "sentTitle": "Trimis",
+    "sentText": "Revenim în scurt timp",
+    "errorText": "Eroare. Încercați din nou",
+    "footer": "Răspundem în mod normal în 5 minute",
+    "errors": {
+      "name": "Introduceți numele",
+      "phone": "Număr invalid"
+    }
+  },
+  "process": {
+    "title": "Cum lucrăm",
+    "subtitle": "Drumul simplu de la idee la lansare",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Apel",
+        "description": "Înțelegem obiectivele.",
+        "duration": "30 min"
+      },
+      {
+        "number": "02",
+        "title": "Plan",
+        "description": "Pregătim oferta.",
+        "duration": "2 zile"
+      },
+      {
+        "number": "03",
+        "title": "Dezvoltare",
+        "description": "Construim și arătăm progresul.",
+        "duration": "2–4 săptămâni"
+      },
+      {
+        "number": "04",
+        "title": "Lansare",
+        "description": "Suport și îmbunătățiri.",
+        "duration": "Continu"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Proiecte",
+    "subtitle": "Soluții care funcționează",
+    "cta": "Vezi →",
+    "projects": [
+      {
+        "title": "Bot Telegram pentru vânzări",
+        "tag": "Automatizare",
+        "description": "Un bot inteligent care colectează lead-uri, răspunde clienților și procesează cereri 24/7.",
+        "tech": ["Node.js", "Telegram API", "MongoDB", "Webhook"],
+        "features": [
+          "Colectare lead-uri",
+          "Răspunsuri pe scenarii",
+          "Integrare CRM",
+          "Analitica mesajelor"
+        ]
+      },
+      {
+        "title": "Bot-Funnel pentru afaceri",
+        "tag": "Bot Telegram",
+        "description": "O întreagă pâlnie de vânzări în Telegram: chestionare, lead-uri, mesaje și notificări.",
+        "tech": ["Telegram API", "BotFather", "Node.js", "FastAPI"],
+        "features": [
+          "Întrebări tip quiz",
+          "Răspunsuri automate",
+          "Notificări pentru manager",
+          "Export lead-uri"
+        ]
+      },
+      {
+        "title": "Landing pentru servicii",
+        "tag": "Landing",
+        "description": "Un landing modern cu animații, încărcare rapidă și conversie ridicată.",
+        "tech": ["React", "Next.js", "TailwindCSS", "Vercel"],
+        "features": [
+          "Încărcare rapidă",
+          "Design responsive",
+          "Optimizare SEO",
+          "Integrare analiză"
+        ]
+      },
+      {
+        "title": "Site corporativ",
+        "tag": "Site Web",
+        "description": "Un site structurat cu pagini, formulare, blog și integrări.",
+        "tech": ["Next.js", "Node.js", "Firebase", "MUI"],
+        "features": [
+          "Structură multi-pagină",
+          "Cabinet utilizator",
+          "Formular de cereri",
+          "CMS pentru conținut"
+        ]
+      },
+      {
+        "title": "Reclamă targetată",
+        "tag": "Marketing",
+        "description": "Campanii publicitare pentru Instagram, TikTok și Facebook cu optimizare.",
+        "tech": ["Meta Ads", "TikTok Ads", "Google Analytics", "Meta Pixel"],
+        "features": [
+          "Analiza nișei",
+          "Setarea campaniilor",
+          "Testare A/B",
+          "Optimizarea performanței"
+        ]
+      },
+      {
+        "title": "Mini CRM pentru afaceri",
+        "tag": "CRM",
+        "description": "O CRM simplă pentru clienți, comenzi și lead-uri — totul într-un singur loc.",
+        "tech": ["React", "Node.js", "PostgreSQL", "Supabase"],
+        "features": [
+          "Listă clienți",
+          "Gestionare statusuri",
+          "Reminder-e",
+          "Export date"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimoniale",
+    "subtitle": "Clienții au încredere în noi",
+    "items": [
+      {
+        "name": "Ion Popescu",
+        "role": "CEO, TechCorp",
+        "avatar": "IP",
+        "rating": 5,
+        "text": "CRM-ul a crescut eficiența și a economisit timp."
+      },
+      {
+        "name": "Maria Andronic",
+        "role": "Director Marketing, DataLabs",
+        "avatar": "MA",
+        "rating": 5,
+        "text": "Conversia a crescut de 4 ori. Rezultat excelent."
+      },
+      {
+        "name": "Andrei Cojocaru",
+        "role": "Fondator, BizHub",
+        "avatar": "AC",
+        "rating": 5,
+        "text": "Botul gestionează aproape toate cererile clienților."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Prețuri",
+    "subtitle": "Tarife simple și transparente",
+    "button": "Alege",
+    "badge": "Alegerea cea mai bună",
+    "plans": [
+      {
+        "name": "Consultare",
+        "price": "Gratuit",
+        "features": ["Videocall", "Evaluarea sarcinii", "Recomandări"]
+      },
+      {
+        "name": "Landing + Bot",
+        "price": "$300",
+        "features": [
+          "Landing page",
+          "Telegram-bot, Instagram-bot",
+          "Integrare CRM cu API-ul dvs.",
+          "Adaptabilitate",
+          "2 luni suport"
+        ]
+      },
+      {
+        "name": "Site + CRM",
+        "price": "$600",
+        "features": [
+          "Site multi-pagină (până la 5 pagini)",
+          "CRM, integrare CRM cu API-ul dvs.",
+          "Automatizarea proceselor",
+          "Analitică",
+          "6 luni suport",
+          "Comunicare prioritară"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Răspunsuri rapide",
+    "items": [
+      { "question": "Cât durează un landing?", "answer": "7–14 zile." },
+      { "question": "Oferiți suport?", "answer": "Da, 3–12 luni." },
+      { "question": "Lucrați cu CRM-uri?", "answer": "Da, dacă au API." },
+      {
+        "question": "Ce tehnologii folosiți?",
+        "answer": "React, Next.js, Node.js, Python, Telegram API."
+      },
+      { "question": "Cine deține codul?", "answer": "100% clientul." },
+      {
+        "question": "Pot modifica proiectul ulterior?",
+        "answer": "Da. Modificările mici sunt gratuite."
+      },
+      { "question": "Faceți SEO?", "answer": "Da, SEO de bază este inclus." },
+      { "question": "Lucrați internațional?", "answer": "Da, lucrăm global." }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Povestește-ne despre proiect",
+    "labels": {
+      "name": "Nume *",
+      "phone": "Telefon *",
+      "message": "Mesaj *"
+    },
+    "placeholders": {
+      "name": "Numele tău",
+      "phone": "+373 XX XXX XXX",
+      "message": "Detalii despre proiect..."
+    },
+    "errors": {
+      "name": "Introduceți numele",
+      "phone": "Număr invalid",
+      "message": "Minim 10 caractere"
+    },
+    "button": {
+      "default": "Trimite",
+      "loading": "Se trimite…"
+    },
+    "status": {
+      "success": "Mesaj trimis!",
+      "error": "Eroare. Încercați mai târziu."
+    }
+  },
+  "outro": {
+    "tagline": "Creăm soluții digitale simple și inteligente",
+    "contact": "Email: {{email}}"
+  },
+  "techOrbit": {
+    "title": "Tehnologii",
+    "subtitle": "Folosim ce este mai bun"
+  },
+  "pricingModal": {
+    "title": "Trimite cererea",
+    "subtitle": "Vă vom contacta în scurt timp",
+    "namePlaceholder": "Nume",
+    "phonePlaceholder": "+373 XX XXX XXX",
+    "companyPlaceholder": "Companie (opțional)",
+    "send": "Trimite",
+    "sending": "Se trimite...",
+    "sentTitle": "Gata",
+    "sentText": "Vă vom scrie în curând",
+    "errorText": "Eroare. Încercați din nou",
+    "footer": "Răspundem în aproximativ o oră",
+    "errors": {
+      "name": "Introduceți numele",
+      "phone": "Număr invalid"
+    }
+  }
+}
