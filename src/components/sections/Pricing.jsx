@@ -13,36 +13,28 @@ export default function Pricing() {
     {
       name: `${t('pricing.plans.0.name')}`,
       price: `${t('pricing.plans.0.price')}`,
-      features: [
-        `${t('pricing.plans.0.features.0')}`,
-        `${t('pricing.plans.0.features.1')}`,
-        `${t('pricing.plans.0.features.2')}`
-      ],
+      description: `${t('pricing.plans.0.description')}`,
+      features: Array.from({ length: 7 }, (_, i) =>
+        `${t(`pricing.plans.0.features.${i}`)}`
+      ),
       recommended: false
     },
     {
       name: `${t('pricing.plans.1.name')}`,
       price: `${t('pricing.plans.1.price')}`,
-      features: [
-        `${t('pricing.plans.1.features.0')}`,
-        `${t('pricing.plans.1.features.1')}`,
-        `${t('pricing.plans.1.features.2')}`,
-        `${t('pricing.plans.1.features.3')}`,
-        `${t('pricing.plans.1.features.4')}`
-      ],
+      description: `${t('pricing.plans.1.description')}`,
+      features: Array.from({ length: 5 }, (_, i) =>
+        `${t(`pricing.plans.1.features.${i}`)}`
+      ),
       recommended: true
     },
     {
       name: `${t('pricing.plans.2.name')}`,
       price: `${t('pricing.plans.2.price')}`,
-      features: [
-        `${t('pricing.plans.2.features.0')}`,
-        `${t('pricing.plans.2.features.1')}`,
-        `${t('pricing.plans.2.features.2')}`,
-        `${t('pricing.plans.2.features.3')}`,
-        `${t('pricing.plans.2.features.4')}`,
-        `${t('pricing.plans.2.features.5')}`
-      ],
+      description: `${t('pricing.plans.2.description')}`,
+      features: Array.from({ length: 7 }, (_, i) =>
+        `${t(`pricing.plans.2.features.${i}`)}`
+      ),
       recommended: false
     }
   ];
@@ -55,6 +47,9 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
+          <div className='pricing__free-badge'>
+            ✨ {t('pricing.freeBadge')}
+          </div>
           <h2 className='pricing__title text-center'>{t('pricing.title')}</h2>
           <p className='pricing__subtitle subtitle text-center'>
             {t('pricing.subtitle')}
@@ -79,6 +74,10 @@ export default function Pricing() {
 
               <h3 className='pricing-card__name'>{plan.name}</h3>
               <div className='pricing-card__price'>{plan.price}</div>
+
+              {plan.description && (
+                <p className='pricing-card__description'>{plan.description}</p>
+              )}
 
               <ul className='pricing-card__features'>
                 {plan.features.map(feature => (
