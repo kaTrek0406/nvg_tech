@@ -7,7 +7,6 @@ import Hero from './components/sections/Hero';
 import HowItWorks from './components/sections/HowItWorks';
 import Outro from './components/sections/Outro';
 import Portfolio from './components/sections/Portfolio';
-import Preloader from './components/sections/Preloader';
 import Pricing from './components/sections/Pricing';
 import Services from './components/sections/Services';
 import TechOrbit from './components/sections/TechOrbit';
@@ -15,7 +14,6 @@ import Testimonials from './components/sections/Testimonials';
 import { useLenis } from './hooks/useLenis.jsx';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const lenis = useLenis();
 
@@ -56,9 +54,6 @@ export default function App() {
 
   return (
     <>
-      {/* Preloader */}
-      {loading && <Preloader onComplete={() => setLoading(false)} />}
-
       {/* Header */}
       <Header
         onScrollToContact={onScrollToContact}
