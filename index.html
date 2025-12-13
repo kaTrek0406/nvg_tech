@@ -42,6 +42,17 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
+    <!-- GitHub Pages SPA redirect -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
