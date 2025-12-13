@@ -9,7 +9,6 @@ import Outro from './components/sections/Outro';
 import Portfolio from './components/sections/Portfolio';
 import Pricing from './components/sections/Pricing';
 import Services from './components/sections/Services';
-import TechOrbit from './components/sections/TechOrbit';
 import Testimonials from './components/sections/Testimonials';
 import { useLenis } from './hooks/useLenis.jsx';
 
@@ -63,8 +62,6 @@ export default function App() {
       {/* Main Content */}
       <main>
         <Hero onScrollToPortfolio={onScrollToPortfolio} />
-        <TechOrbit />
-        {/* <LogoTarget /> */}
         <Services />
         <HowItWorks />
         <Portfolio />
