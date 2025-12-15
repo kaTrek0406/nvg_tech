@@ -6,7 +6,7 @@ import LanguageSwitcher from '../LanguageSwitcher';
 import QuickContactForm from '../QuickContactForm';
 import './Header.css';
 
-export default function Header({ onScrollToContact }) {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isQuickFormOpen, setIsQuickFormOpen] = useState(false);
@@ -83,10 +83,8 @@ export default function Header({ onScrollToContact }) {
   const handleContactClick = () => {
     setIsMobileMenuOpen(false);
 
-    // Форма должна открываться И НА ДЕСКТОПЕ, И НА МОБИЛКЕ
-    setTimeout(() => {
-      setIsQuickFormOpen(true);
-    }, 150); // ждём закрытия меню, чтобы модалка не дёргалась
+    // Открываем телефонный звонок вместо формы
+    window.location.href = 'tel:+37368614535';
   };
 
   // ✅ Скролл вверх по клику на логотип
