@@ -100,9 +100,7 @@ export default function Hero({ onScrollToPortfolio }) {
 
         <motion.div variants={itemVariants} className='hero__cta'>
           <a
-            href='https://t.me/nvg_tech'
-            target='_blank'
-            rel='noopener noreferrer'
+            href='tel:+37368614535'
             className='btn btn--primary'
             aria-label='Book Free Strategy Call'
           >
