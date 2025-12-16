@@ -1,0 +1,208 @@
+/* Service Pages - Responsive Styles */
+
+.service-page {
+  min-height: 100vh;
+}
+
+.service-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 80px;
+  background: linear-gradient(180deg, rgba(122, 51, 255, 0.05), transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.service-hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, var(--glow), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.service-hero .subtitle {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--text-dim);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.service-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.price-tag {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--success);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.service-benefits {
+  padding: 80px 0;
+  background: rgba(10, 0, 20, 0.5);
+}
+
+.service-benefits h2 {
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition: all var(--t-300);
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 0 24px rgba(122, 51, 255, 0.2);
+}
+
+.benefit-card h3 {
+  font-size: clamp(18px, 2.5vw, 22px);
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.benefit-card p {
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .service-hero {
+    min-height: 50vh;
+    padding: 100px 0 60px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .service-benefits {
+    padding: 60px 0;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .service-hero {
+    min-height: auto;
+    padding: 80px 0 50px;
+    text-align: center;
+  }
+
+  .service-hero h1 {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .service-hero .subtitle {
+    font-size: 16px;
+  }
+
+  .service-price {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .price-tag {
+    font-size: 32px;
+  }
+
+  .service-price .btn {
+    width: 100%;
+    padding: 16px 32px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .benefit-card {
+    padding: 24px 20px;
+  }
+
+  .benefit-card h3 {
+    font-size: 18px;
+  }
+
+  .benefit-card p {
+    font-size: 14px;
+  }
+
+  .service-benefits {
+    padding: 50px 0;
+  }
+
+  .service-benefits h2 {
+    margin-bottom: 32px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .service-hero {
+    padding: 60px 0 40px;
+  }
+
+  .service-hero h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .service-hero .subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .price-tag {
+    font-size: 28px;
+  }
+
+  .benefit-card {
+    padding: 20px 16px;
+  }
+}

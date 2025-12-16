@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Header from '../../components/sections/Header';
 import Footer from '../../components/sections/Footer';
 import Contact from '../../components/sections/Contact';
+import './ServicePage.css';
 
 export default function EcommercePage() {
   return (

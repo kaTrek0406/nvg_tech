@@ -437,3 +437,129 @@ label {
 .pointer-events-none {
   pointer-events: none;
 }
+
+/* === Enhanced Mobile Responsiveness === */
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 48px;
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+
+  /* Prevent text zoom on input focus in iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* Better spacing on mobile */
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  /* Adjust container padding on very small screens */
+  .container {
+    padding-inline: 20px;
+  }
+
+  /* Make scroll to top button smaller on mobile */
+  .scroll-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-inline: 16px;
+  }
+
+  .btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  h2 {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  h3 {
+    font-size: clamp(20px, 4vw, 24px);
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  section {
+    padding-block: 40px;
+  }
+}
+
+/* Tablet landscape mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+
+  h1 {
+    font-size: clamp(48px, 6vw, 64px);
+  }
+
+  h2 {
+    font-size: clamp(36px, 4.5vw, 52px);
+  }
+
+  section {
+    padding-block: 70px;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  h1 {
+    font-size: 84px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+}
+
+/* Improved touch interactions */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .card:hover,
+  .glass:hover {
+    transform: none;
+  }
+
+  /* Make interactive elements easier to tap */
+  button,
+  a,
+  .btn {
+    min-height: 44px;
+  }
+}
