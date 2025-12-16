@@ -5,10 +5,17 @@ import { useTranslation } from 'react-i18next';
 import GridScan from '../GridScan';
 import './Hero.css';
 
-export default function Hero({ onScrollToPortfolio }) {
+export default function Hero() {
   const sectionRef = useRef(null);
   const bgRef = useRef(null);
   const { t } = useTranslation();
+
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   useEffect(() => {
     // Parallax background animation
     const section = sectionRef.current;
@@ -118,10 +125,10 @@ export default function Hero({ onScrollToPortfolio }) {
 
           <button
             className='btn btn--secondary'
-            onClick={onScrollToPortfolio}
-            aria-label='View Case Studies'
+            onClick={scrollToPricing}
+            aria-label='View Pricing'
           >
-            {t('hero.viewCases')}
+            {t('hero.pricing')}
           </button>
         </motion.div>
 

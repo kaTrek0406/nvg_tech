@@ -25,22 +25,6 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const onScrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element && lenis) {
-      lenis.scrollTo(element, { offset: -80, duration: 1.5 });
-    }
-  };
-
-  const onScrollToPortfolio = () => {
-    setTimeout(() => {
-      const element = document.getElementById('portfolio');
-      if (element && lenis) {
-        lenis.scrollTo(element, { offset: -80, duration: 1.5 });
-      }
-    }, 100);
-  };
-
   const scrollToTop = () => {
     if (lenis) {
       lenis.scrollTo(0, { duration: 1.5 });
@@ -51,13 +35,10 @@ export default function Home() {
 
   return (
     <>
-      <Header
-        onScrollToContact={onScrollToContact}
-        onScrollToPortfolio={onScrollToPortfolio}
-      />
+      <Header />
 
       <main>
-        <Hero onScrollToPortfolio={onScrollToPortfolio} />
+        <Hero />
         <Services />
         <HowItWorks />
         <Portfolio />

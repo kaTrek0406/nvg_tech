@@ -1,20 +1,12 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import Header from '../../components/sections/Header';
 import Footer from '../../components/sections/Footer';
 import Contact from '../../components/sections/Contact';
 
 export default function AutomationPage() {
-  const navigate = useNavigate();
-
   return (
     <>
-      <Header
-        onScrollToContact={() => {
-          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-        }}
-        onScrollToPortfolio={() => navigate('/#portfolio')}
-      />
+      <Header />
 
       <main className="service-page">
         <section className="service-hero">
