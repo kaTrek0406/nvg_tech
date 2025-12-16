@@ -1,0 +1,105 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0A0014"/>
+
+  <!-- Gradient circles for background -->
+  <circle cx="300" cy="150" r="200" fill="url(#gradient1)" opacity="0.3" filter="blur(60px)"/>
+  <circle cx="900" cy="480" r="250" fill="url(#gradient2)" opacity="0.3" filter="blur(60px)"/>
+
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+    </pattern>
+
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A33FF"/>
+      <stop offset="100%" stop-color="#9F6AFF"/>
+    </linearGradient>
+
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9F6AFF"/>
+      <stop offset="100%" stop-color="#CBA3FF"/>
+    </linearGradient>
+
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A33FF"/>
+      <stop offset="100%" stop-color="#CBA3FF"/>
+    </linearGradient>
+
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CBA3FF"/>
+      <stop offset="50%" stop-color="#EDEDED"/>
+      <stop offset="100%" stop-color="#CBA3FF"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Logo -->
+  <g transform="translate(400, 180)">
+    <path
+      d="M40 160 L40 40 L100 100 L160 40 L160 160"
+      stroke="url(#logoGradient)"
+      stroke-width="12"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+      filter="url(#glow)"
+    />
+  </g>
+
+  <!-- NVG Text -->
+  <text
+    x="600"
+    y="270"
+    font-family="'Space Grotesk', Arial, sans-serif"
+    font-size="120"
+    font-weight="700"
+    fill="url(#textGradient)"
+    text-anchor="middle"
+    filter="url(#glow)"
+  >NVG</text>
+
+  <!-- Subtitle -->
+  <text
+    x="600"
+    y="360"
+    font-family="'Inter', Arial, sans-serif"
+    font-size="36"
+    font-weight="400"
+    fill="#BBBBBB"
+    text-anchor="middle"
+  >Создание сайтов в Молдове</text>
+
+  <!-- Services -->
+  <text
+    x="600"
+    y="420"
+    font-family="'Inter', Arial, sans-serif"
+    font-size="24"
+    font-weight="400"
+    fill="#888888"
+    text-anchor="middle"
+  >Лендинги • Интернет-магазины • Telegram боты</text>
+
+  <!-- Price badge -->
+  <rect x="500" y="460" width="200" height="50" rx="25" fill="#10b981" opacity="0.9"/>
+  <text
+    x="600"
+    y="493"
+    font-family="'Inter', Arial, sans-serif"
+    font-size="24"
+    font-weight="700"
+    fill="white"
+    text-anchor="middle"
+  >от $50</text>
+</svg>
