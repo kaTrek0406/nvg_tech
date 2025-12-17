@@ -31,8 +31,9 @@ export async function notify(payload) {
  * @returns {Promise<{ok: boolean}>}
  */
 export async function notifyTelegram(payload) {
-  const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-  const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+  // Используем переменные окружения или fallback значения
+  const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || '8597278419:AAF1Zi6996mKeLHrNlwiXBM8fdCyifohYL4';
+  const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID || '709195195';
 
   console.log('🔍 Telegram credentials check:', {
     hasToken: !!TELEGRAM_BOT_TOKEN,
@@ -40,11 +41,6 @@ export async function notifyTelegram(payload) {
     token: TELEGRAM_BOT_TOKEN ? `${TELEGRAM_BOT_TOKEN.substring(0, 10)}...` : 'missing',
     chatId: TELEGRAM_CHAT_ID || 'missing'
   });
-
-  if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
-    console.warn('⚠️ Telegram credentials not configured');
-    return notify(payload);
-  }
 
   const message = `
 🔔 Новая заявка с NVG Landing
