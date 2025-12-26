@@ -15,6 +15,7 @@ i18n
       ru: { translation: ru },
       ro: { translation: ro }
     },
+    lng: 'ro', // принудительно устанавливаем румынский как начальный язык
     fallbackLng: 'ro', // язык по умолчанию - румынский
     interpolation: {
       escapeValue: false // не экранируем HTML
