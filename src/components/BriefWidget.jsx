@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { notifyTelegram } from '../services/notify';
 import {
   formatMoldovaPhone,
@@ -8,6 +9,7 @@ import {
 import './BriefWidget.css';
 
 export default function BriefWidget() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -23,14 +25,14 @@ export default function BriefWidget() {
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = 'Введите имя';
+    if (!formData.name.trim()) newErrors.name = t('briefWidget.errors.name');
     if (!isValidMoldovaPhone(formData.phone))
-      newErrors.phone = 'Неверный формат';
-    if (!formData.projectType) newErrors.projectType = 'Выберите тип';
-    if (!formData.budget) newErrors.budget = 'Выберите бюджет';
-    if (!formData.timeline) newErrors.timeline = 'Выберите сроки';
+      newErrors.phone = t('briefWidget.errors.phone');
+    if (!formData.projectType) newErrors.projectType = t('briefWidget.errors.projectType');
+    if (!formData.budget) newErrors.budget = t('briefWidget.errors.budget');
+    if (!formData.timeline) newErrors.timeline = t('briefWidget.errors.timeline');
     if (formData.description.trim().length < 10)
-      newErrors.description = 'Минимум 10 символов';
+      newErrors.description = t('briefWidget.errors.description');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -132,7 +134,7 @@ ${formData.description}
                 strokeLinecap="round"
               />
             </svg>
-            <span className="brief-widget__button-text">Бриф</span>
+            <span className="brief-widget__button-text">{t('briefWidget.buttonText')}</span>
           </motion.button>
         )}
       </AnimatePresence>
@@ -150,8 +152,8 @@ ${formData.description}
             {/* Header */}
             <div className="brief-widget__header">
               <div>
-                <h3>Онлайн консультация</h3>
-                <p>Заполните бриф за 2 минуты</p>
+                <h3>{t('briefWidget.title')}</h3>
+                <p>{t('briefWidget.subtitle')}</p>
               </div>
               <button
                 className="brief-widget__close"
@@ -171,7 +173,7 @@ ${formData.description}
                     setFormData({ ...formData, name: e.target.value })
                   }
                   className={errors.name ? 'error' : ''}
-                  placeholder="Ваше имя *"
+                  placeholder={t('briefWidget.namePlaceholder')}
                 />
                 {errors.name && <span className="error-msg">{errors.name}</span>}
               </div>
@@ -182,7 +184,7 @@ ${formData.description}
                   value={formData.phone}
                   onChange={handlePhoneChange}
                   className={errors.phone ? 'error' : ''}
-                  placeholder="+373 XX XXX XXX *"
+                  placeholder={t('briefWidget.phonePlaceholder')}
                 />
                 {errors.phone && <span className="error-msg">{errors.phone}</span>}
               </div>
@@ -195,13 +197,25 @@ ${formData.description}
                   }
                   className={errors.projectType ? 'error' : ''}
                 >
-                  <option value="">Тип проекта *</option>
-                  <option value="Интернет-магазин">Интернет-магазин</option>
-                  <option value="Лендинг">Лендинг</option>
-                  <option value="Чат-бот">Чат-бот</option>
-                  <option value="Таргетированная реклама">Реклама</option>
-                  <option value="Автоматизация">Автоматизация</option>
-                  <option value="Другое">Другое</option>
+                  <option value="">{t('briefWidget.projectTypePlaceholder')}</option>
+                  <option value={t('briefWidget.projectTypes.ecommerce')}>
+                    {t('briefWidget.projectTypes.ecommerce')}
+                  </option>
+                  <option value={t('briefWidget.projectTypes.landing')}>
+                    {t('briefWidget.projectTypes.landing')}
+                  </option>
+                  <option value={t('briefWidget.projectTypes.chatbot')}>
+                    {t('briefWidget.projectTypes.chatbot')}
+                  </option>
+                  <option value={t('briefWidget.projectTypes.ads')}>
+                    {t('briefWidget.projectTypes.ads')}
+                  </option>
+                  <option value={t('briefWidget.projectTypes.automation')}>
+                    {t('briefWidget.projectTypes.automation')}
+                  </option>
+                  <option value={t('briefWidget.projectTypes.other')}>
+                    {t('briefWidget.projectTypes.other')}
+                  </option>
                 </select>
                 {errors.projectType && <span className="error-msg">{errors.projectType}</span>}
               </div>
@@ -214,11 +228,19 @@ ${formData.description}
                   }
                   className={errors.budget ? 'error' : ''}
                 >
-                  <option value="">Бюджет *</option>
-                  <option value="До $300">До $300</option>
-                  <option value="$300 - $700">$300 - $700</option>
-                  <option value="От $700">От $700</option>
-                  <option value="Обсудим">Обсудим</option>
+                  <option value="">{t('briefWidget.budgetPlaceholder')}</option>
+                  <option value={t('briefWidget.budgets.low')}>
+                    {t('briefWidget.budgets.low')}
+                  </option>
+                  <option value={t('briefWidget.budgets.medium')}>
+                    {t('briefWidget.budgets.medium')}
+                  </option>
+                  <option value={t('briefWidget.budgets.high')}>
+                    {t('briefWidget.budgets.high')}
+                  </option>
+                  <option value={t('briefWidget.budgets.discuss')}>
+                    {t('briefWidget.budgets.discuss')}
+                  </option>
                 </select>
                 {errors.budget && <span className="error-msg">{errors.budget}</span>}
               </div>
@@ -231,10 +253,16 @@ ${formData.description}
                   }
                   className={errors.timeline ? 'error' : ''}
                 >
-                  <option value="">Сроки *</option>
-                  <option value="Срочно (1-2 недели)">Срочно (1-2 нед)</option>
-                  <option value="Средне (2-4 недели)">Средне (2-4 нед)</option>
-                  <option value="Не спешу">Не спешу</option>
+                  <option value="">{t('briefWidget.timelinePlaceholder')}</option>
+                  <option value={t('briefWidget.timelines.urgent')}>
+                    {t('briefWidget.timelines.urgent')}
+                  </option>
+                  <option value={t('briefWidget.timelines.medium')}>
+                    {t('briefWidget.timelines.medium')}
+                  </option>
+                  <option value={t('briefWidget.timelines.flexible')}>
+                    {t('briefWidget.timelines.flexible')}
+                  </option>
                 </select>
                 {errors.timeline && <span className="error-msg">{errors.timeline}</span>}
               </div>
@@ -247,7 +275,7 @@ ${formData.description}
                     setFormData({ ...formData, description: e.target.value })
                   }
                   className={errors.description ? 'error' : ''}
-                  placeholder="Опишите ваш проект... *"
+                  placeholder={t('briefWidget.descriptionPlaceholder')}
                 />
                 {errors.description && <span className="error-msg">{errors.description}</span>}
               </div>
@@ -261,22 +289,22 @@ ${formData.description}
                 {status === 'loading' ? (
                   <>
                     <div className="spinner" />
-                    Отправка...
+                    {t('briefWidget.sending')}
                   </>
                 ) : (
-                  'Отправить'
+                  t('briefWidget.button')
                 )}
               </button>
 
               {status === 'success' && (
                 <div className="success-message">
-                  ✅ Отправлено! Свяжемся в течение 30 минут
+                  ✅ {t('briefWidget.success')}
                 </div>
               )}
 
               {status === 'error' && (
                 <div className="error-message">
-                  ❌ Ошибка. Попробуйте позже
+                  ❌ {t('briefWidget.error')}
                 </div>
               )}
             </form>

@@ -371,5 +371,47 @@
         "service": "Выберите услугу"
       }
     }
+  },
+  "briefWidget": {
+    "buttonText": "Бриф",
+    "title": "Онлайн консультация",
+    "subtitle": "Заполните бриф за 2 минуты",
+    "namePlaceholder": "Ваше имя *",
+    "phonePlaceholder": "+373 XX XXX XXX *",
+    "projectTypePlaceholder": "Тип проекта *",
+    "projectTypes": {
+      "ecommerce": "Интернет-магазин",
+      "landing": "Лендинг",
+      "chatbot": "Чат-бот",
+      "ads": "Реклама",
+      "automation": "Автоматизация",
+      "other": "Другое"
+    },
+    "budgetPlaceholder": "Бюджет *",
+    "budgets": {
+      "low": "До $300",
+      "medium": "$300 - $700",
+      "high": "От $700",
+      "discuss": "Обсудим"
+    },
+    "timelinePlaceholder": "Сроки *",
+    "timelines": {
+      "urgent": "Срочно (1-2 нед)",
+      "medium": "Средне (2-4 нед)",
+      "flexible": "Не спешу"
+    },
+    "descriptionPlaceholder": "Опишите ваш проект... *",
+    "button": "Отправить",
+    "sending": "Отправка...",
+    "success": "Отправлено! Свяжемся в течение 30 минут",
+    "error": "Ошибка. Попробуйте позже",
+    "errors": {
+      "name": "Введите имя",
+      "phone": "Неверный формат",
+      "projectType": "Выберите тип",
+      "budget": "Выберите бюджет",
+      "timeline": "Выберите сроки",
+      "description": "Минимум 10 символов"
+    }
   }
 }

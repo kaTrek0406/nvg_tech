@@ -362,5 +362,47 @@
         "service": "Select a service"
       }
     }
+  },
+  "briefWidget": {
+    "buttonText": "Brief",
+    "title": "Online Consultation",
+    "subtitle": "Fill out the brief in 2 minutes",
+    "namePlaceholder": "Your name *",
+    "phonePlaceholder": "+373 XX XXX XXX *",
+    "projectTypePlaceholder": "Project type *",
+    "projectTypes": {
+      "ecommerce": "E-commerce Store",
+      "landing": "Landing Page",
+      "chatbot": "Chatbot",
+      "ads": "Advertising",
+      "automation": "Automation",
+      "other": "Other"
+    },
+    "budgetPlaceholder": "Budget *",
+    "budgets": {
+      "low": "Up to $300",
+      "medium": "$300 - $700",
+      "high": "From $700",
+      "discuss": "Discuss"
+    },
+    "timelinePlaceholder": "Timeline *",
+    "timelines": {
+      "urgent": "Urgent (1-2 weeks)",
+      "medium": "Medium (2-4 weeks)",
+      "flexible": "No rush"
+    },
+    "descriptionPlaceholder": "Describe your project... *",
+    "button": "Send",
+    "sending": "Sending...",
+    "success": "Sent! We'll contact you within 30 minutes",
+    "error": "Error. Try later",
+    "errors": {
+      "name": "Enter your name",
+      "phone": "Invalid format",
+      "projectType": "Select type",
+      "budget": "Select budget",
+      "timeline": "Select timeline",
+      "description": "Minimum 10 characters"
+    }
   }
 }

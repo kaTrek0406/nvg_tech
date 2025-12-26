@@ -353,5 +353,47 @@
         "service": "Selectați serviciul"
       }
     }
+  },
+  "briefWidget": {
+    "buttonText": "Brief",
+    "title": "Consultație online",
+    "subtitle": "Completați brieful în 2 minute",
+    "namePlaceholder": "Numele dumneavoastră *",
+    "phonePlaceholder": "+373 XX XXX XXX *",
+    "projectTypePlaceholder": "Tipul proiectului *",
+    "projectTypes": {
+      "ecommerce": "Magazin online",
+      "landing": "Landing Page",
+      "chatbot": "Chatbot",
+      "ads": "Publicitate",
+      "automation": "Automatizare",
+      "other": "Altceva"
+    },
+    "budgetPlaceholder": "Buget *",
+    "budgets": {
+      "low": "Până la $300",
+      "medium": "$300 - $700",
+      "high": "De la $700",
+      "discuss": "Discutăm"
+    },
+    "timelinePlaceholder": "Termene *",
+    "timelines": {
+      "urgent": "Urgent (1-2 săptămâni)",
+      "medium": "Mediu (2-4 săptămâni)",
+      "flexible": "Fără grabă"
+    },
+    "descriptionPlaceholder": "Descrieți proiectul... *",
+    "button": "Trimite",
+    "sending": "Se trimite...",
+    "success": "Trimis! Vă contactăm în 30 de minute",
+    "error": "Eroare. Încercați mai târziu",
+    "errors": {
+      "name": "Introduceți numele",
+      "phone": "Format invalid",
+      "projectType": "Selectați tipul",
+      "budget": "Selectați bugetul",
+      "timeline": "Selectați termenele",
+      "description": "Minim 10 caractere"
+    }
   }
 }
