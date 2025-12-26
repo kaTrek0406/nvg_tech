@@ -28,15 +28,15 @@
     "items": [
       {
         "title": "Automatizare",
-        "description": "Boți, integrări și procese care economisesc timp."
+        "description": "Chatboți, integrări și procese care economisesc timp și bani."
       },
       {
-        "title": "Landing Pages",
-        "description": "Pagini rapide, curate și ușor de folosit."
+        "title": "Magazine online",
+        "description": "Magazine complete de tip one-page și multi-page pentru afacerea ta."
       },
       {
-        "title": "Instrumente digitale",
-        "description": "CRM-uri și dashboard-uri pentru afacerea ta."
+        "title": "Publicitate targetată",
+        "description": "Reclame pe Facebook și Instagram pentru atragerea clienților și creșterea vânzărilor."
       }
     ]
   },
@@ -194,36 +194,52 @@
   },
   "pricing": {
     "title": "Prețuri",
-    "subtitle": "Tarife simple și transparente",
+    "subtitle": "Tarife transparente pentru afacerea ta",
+    "freeBadge": "Consultație gratuită",
     "button": "Alege",
-    "badge": "Alegerea cea mai bună",
+    "badge": "Popular",
     "plans": [
       {
-        "name": "Consultare",
-        "price": "Gratuit",
-        "features": ["Videocall", "Evaluarea sarcinii", "Recomandări"]
-      },
-      {
-        "name": "Landing + Bot",
-        "price": "$300",
+        "name": "Magazin online",
+        "price": "de la $500",
+        "description": "Pentru afaceri care doresc să vândă online — de la simple one-page până la magazine multi-pagină complete",
         "features": [
-          "Landing page",
-          "Telegram-bot, Instagram-bot",
-          "Integrare CRM cu API-ul dvs.",
-          "Adaptabilitate",
-          "2 luni suport"
+          "Site one-page sau multi-pagină",
+          "Design modern și layout responsive",
+          "Catalog de produse cu coș de cumpărături",
+          "Integrarea sistemelor de plată",
+          "Configurare livrare (poștă, curier)",
+          "Configurare Meta Pixel pentru publicitate",
+          "Integrare CRM (la cerere)",
+          "Suport 1 lună după lansare"
         ]
       },
       {
-        "name": "Site + CRM",
-        "price": "$600",
+        "name": "Automatizare și chatboți",
+        "price": "de la $100",
+        "description": "Boți inteligenți cu AI pentru răspunsuri automate clienților, preluarea comenzilor și procesarea cererilor 24/7",
         "features": [
-          "Site multi-pagină (până la 5 pagini)",
-          "CRM, integrare CRM cu API-ul dvs.",
-          "Automatizarea proceselor",
-          "Analitică",
-          "6 luni suport",
-          "Comunicare prioritară"
+          "Chatbot pentru Telegram sau WhatsApp",
+          "Inteligență AI pentru auto-răspunsuri",
+          "Preluarea și procesarea cererilor",
+          "Integrare cu sistemele CRM",
+          "Notificări automate",
+          "Integrare cu site sau magazin",
+          "Configurare scenarii și funnel-uri"
+        ]
+      },
+      {
+        "name": "Publicitate targetată",
+        "price": "de la $200",
+        "description": "Lansarea și gestionarea campaniilor publicitare pe Facebook și Instagram pentru atragerea publicului țintă și creșterea vânzărilor",
+        "features": [
+          "Configurare Meta Ads Manager",
+          "Crearea și lansarea campaniilor publicitare",
+          "Targetare publicul țintă",
+          "Creative și texte pentru anunțuri",
+          "Testare A/B a anunțurilor",
+          "Optimizare săptămânală a campaniilor",
+          "Rapoarte de performanță"
         ]
       }
     ]

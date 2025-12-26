@@ -15,7 +15,7 @@ i18n
       ru: { translation: ru },
       ro: { translation: ro }
     },
-    fallbackLng: 'ru', // язык по умолчанию
+    fallbackLng: 'ro', // язык по умолчанию - румынский
     interpolation: {
       escapeValue: false // не экранируем HTML
     }

@@ -28,15 +28,15 @@
     "items": [
       {
         "title": "Automation",
-        "description": "Bots, integrations and workflows that save time."
+        "description": "Chatbots, integrations and workflows that save time and money."
       },
       {
-        "title": "Landing Pages",
-        "description": "Fast, clean and user-friendly pages."
+        "title": "E-commerce Stores",
+        "description": "Full-featured one-page and multi-page online stores for your business."
       },
       {
-        "title": "Digital Tools",
-        "description": "CRM systems and dashboards for your business."
+        "title": "Targeted Advertising",
+        "description": "Facebook and Instagram ads to attract customers and grow sales."
       }
     ]
   },
@@ -194,36 +194,52 @@
   },
   "pricing": {
     "title": "Pricing",
-    "subtitle": "Simple and transparent plans",
+    "subtitle": "Transparent pricing for your business",
+    "freeBadge": "Free consultation",
     "button": "Choose",
-    "badge": "Best Choice",
+    "badge": "Popular",
     "plans": [
       {
-        "name": "Consultation",
-        "price": "Free",
-        "features": ["Video call", "Task evaluation", "Recommendations"]
-      },
-      {
-        "name": "Landing + Bot",
-        "price": "$300",
+        "name": "E-commerce Store",
+        "price": "from $500",
+        "description": "For businesses looking to sell online — from simple one-pagers to full multi-page stores",
         "features": [
-          "Landing page",
-          "Telegram bot, Instagram bot",
-          "CRM integration with your API",
-          "Responsive design",
-          "2 months of support"
+          "One-page or multi-page website",
+          "Modern design and responsive layout",
+          "Product catalog with shopping cart",
+          "Payment system integration",
+          "Shipping setup (mail, courier)",
+          "Meta Pixel setup for advertising",
+          "CRM integration (on request)",
+          "1 month support after launch"
         ]
       },
       {
-        "name": "Website + CRM",
-        "price": "$600",
+        "name": "Automation & Chatbots",
+        "price": "from $100",
+        "description": "Smart AI-powered bots for automatic customer responses, order taking and 24/7 request processing",
         "features": [
-          "Multipage website (up to 5 pages)",
-          "CRM system, CRM integration with your API",
-          "Process automation",
-          "Analytics",
-          "6 months of support",
-          "Priority communication"
+          "Chatbot for Telegram or WhatsApp",
+          "AI intelligence for auto-responses",
+          "Request intake and processing",
+          "CRM system integration",
+          "Automatic notifications",
+          "Website or store integration",
+          "Scenario and funnel setup"
+        ]
+      },
+      {
+        "name": "Targeted Advertising",
+        "price": "from $200",
+        "description": "Launch and management of Facebook and Instagram ad campaigns to attract target audience and grow sales",
+        "features": [
+          "Meta Ads Manager setup",
+          "Ad campaign creation and launch",
+          "Target audience targeting",
+          "Ad creatives and copywriting",
+          "A/B testing of ads",
+          "Weekly campaign optimization",
+          "Performance reports"
         ]
       }
     ]
