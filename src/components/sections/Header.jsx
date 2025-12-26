@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 import { useLenis } from '../../hooks/useLenis.jsx'; // ✅ берём Lenis из твоего hook
 import LanguageSwitcher from '../LanguageSwitcher';
 import QuickContactForm from '../QuickContactForm';
@@ -14,6 +15,8 @@ export default function Header() {
   const ctaButtonRef = useRef(null);
   const { t } = useTranslation();
   const lenis = useLenis(); // ✅ один общий Lenis, как в App
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   // Определяем размер экрана
   useEffect(() => {
@@ -87,14 +90,17 @@ export default function Header() {
     window.location.href = 'tel:+37368614535';
   };
 
-  // ✅ Скролл вверх по клику на логотип
+  // ✅ Скролл вверх по клику на логотип (только на главной)
   const handleLogoClick = e => {
-    e.preventDefault();
-    if (lenis) {
-      lenis.scrollTo(0, { duration: 1.5 });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (isHomePage) {
+      e.preventDefault();
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 1.5 });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
+    // Если не на главной, Link сработает автоматически
     setIsMobileMenuOpen(false);
   };
 
@@ -108,7 +114,7 @@ export default function Header() {
       >
         <div className='header__container container'>
           {/* Logo */}
-          <a href='#hero' className='header__logo' onClick={handleLogoClick}>
+          <Link to='/' className='header__logo' onClick={handleLogoClick}>
             <svg width='40' height='40' viewBox='0 0 100 100' fill='none'>
               <path
                 d='M20 80V20L50 50L80 20V80'
@@ -131,7 +137,7 @@ export default function Header() {
               </defs>
             </svg>
             <span className='header__logo-text'>NVG</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className='header__nav'>

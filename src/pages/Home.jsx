@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import BriefWidget from '../components/BriefWidget';
 import Contact from '../components/sections/Contact';
 import FAQ from '../components/sections/FAQ';
 import Footer from '../components/sections/Footer';
@@ -50,6 +51,9 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      {/* Brief Widget - чат в углу */}
+      <BriefWidget />
 
       {showScrollTop && (
         <button

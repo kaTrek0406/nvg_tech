@@ -1,0 +1,160 @@
+/* Brief Modal Styles */
+
+.brief-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+}
+
+.brief-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 9999;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(122, 51, 255, 0.2);
+}
+
+.brief-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 24px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--t-200);
+}
+
+.brief-modal__close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.brief-modal__title {
+  font-size: clamp(24px, 4vw, 32px);
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--glow), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brief-modal__subtitle {
+  color: var(--text-dim);
+  margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.brief-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.brief-form select {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  transition: all var(--t-300);
+  cursor: pointer;
+}
+
+.brief-form select:focus {
+  outline: none;
+  border-color: rgba(203, 163, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(203, 163, 255, 0.15);
+}
+
+.brief-form select.error {
+  border-color: var(--error);
+}
+
+.brief-form select option {
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+/* Scrollbar для модалки */
+.brief-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.brief-modal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.brief-modal::-webkit-scrollbar-thumb {
+  background: rgba(122, 51, 255, 0.3);
+  border-radius: 4px;
+}
+
+.brief-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(122, 51, 255, 0.5);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .brief-modal {
+    padding: 32px 24px;
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .brief-modal__close {
+    top: 16px;
+    right: 16px;
+  }
+
+  .brief-modal__title {
+    font-size: 24px;
+  }
+
+  .brief-modal__subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .brief-form {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brief-modal {
+    padding: 24px 20px;
+    border-radius: var(--r-lg);
+  }
+
+  .brief-modal__title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+}
