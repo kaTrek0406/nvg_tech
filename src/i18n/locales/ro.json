@@ -315,5 +315,43 @@
       "name": "Introduceți numele",
       "phone": "Număr invalid"
     }
+  },
+  "popups": {
+    "first": {
+      "title": "Consultație gratuită",
+      "subtitle": "Profită de reducerea de 30% până la sfârșitul lunii",
+      "namePlaceholder": "Numele dumneavoastră *",
+      "phonePlaceholder": "+373 XX XXX XXX *",
+      "button": "Obține consultație",
+      "sending": "Se trimite...",
+      "success": "Mulțumim! Vă contactăm în curând",
+      "error": "Eroare. Sunați-ne",
+      "errors": {
+        "name": "Introduceți numele",
+        "phone": "Format invalid"
+      }
+    },
+    "second": {
+      "title": "Ofertă specială!",
+      "subtitle": "Reducere de 30% la comandă astăzi. Completați formularul și primiți calculul costului",
+      "namePlaceholder": "Numele dumneavoastră *",
+      "phonePlaceholder": "+373 XX XXX XXX *",
+      "servicePlaceholder": "Ce vă interesează? *",
+      "services": {
+        "ecommerce": "Magazin online",
+        "automation": "Automatizare și boți",
+        "ads": "Publicitate targetată",
+        "other": "Altceva"
+      },
+      "button": "Obține reducere 30%",
+      "sending": "Se trimite...",
+      "success": "Excelent! Calculăm costul în curând",
+      "error": "Eroare. Încercați mai târziu",
+      "errors": {
+        "name": "Introduceți numele",
+        "phone": "Format invalid",
+        "service": "Selectați serviciul"
+      }
+    }
   }
 }

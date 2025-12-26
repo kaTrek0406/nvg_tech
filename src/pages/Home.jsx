@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import BriefWidget from '../components/BriefWidget';
+import PopupForms from '../components/PopupForms';
 import Contact from '../components/sections/Contact';
 import FAQ from '../components/sections/FAQ';
 import Footer from '../components/sections/Footer';
@@ -54,6 +55,9 @@ export default function Home() {
 
       {/* Brief Widget - чат в углу */}
       <BriefWidget />
+
+      {/* Popup Forms - всплывающие формы с таймерами */}
+      <PopupForms />
 
       {showScrollTop && (
         <button

@@ -324,5 +324,43 @@
       "name": "Enter your name",
       "phone": "Invalid phone number"
     }
+  },
+  "popups": {
+    "first": {
+      "title": "Free Consultation",
+      "subtitle": "Get 30% discount before the end of the month",
+      "namePlaceholder": "Your name *",
+      "phonePlaceholder": "+373 XX XXX XXX *",
+      "button": "Get Consultation",
+      "sending": "Sending...",
+      "success": "Thank you! We'll contact you soon",
+      "error": "Error. Please call us",
+      "errors": {
+        "name": "Enter your name",
+        "phone": "Invalid format"
+      }
+    },
+    "second": {
+      "title": "Special Offer!",
+      "subtitle": "30% discount when ordering today. Fill out the form and get a price quote",
+      "namePlaceholder": "Your name *",
+      "phonePlaceholder": "+373 XX XXX XXX *",
+      "servicePlaceholder": "What are you interested in? *",
+      "services": {
+        "ecommerce": "E-commerce Store",
+        "automation": "Automation & Bots",
+        "ads": "Targeted Advertising",
+        "other": "Other"
+      },
+      "button": "Get 30% Discount",
+      "sending": "Sending...",
+      "success": "Great! We'll calculate the price soon",
+      "error": "Error. Try later",
+      "errors": {
+        "name": "Enter your name",
+        "phone": "Invalid format",
+        "service": "Select a service"
+      }
+    }
   }
 }
