@@ -15,18 +15,17 @@
     transparent,
     var(--electric-color)
   );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: exclude;
   mask-composite: exclude;
   pointer-events: none;
-  opacity: 0.6;
-  animation: electric-slide var(--electric-speed, 3s) linear infinite;
-  will-change: background-position;
+  opacity: 0.4;
+  /* Анимация только на hover для экономии GPU */
 }
 
 .electric-border-light__glow::before {
@@ -39,9 +38,8 @@
     var(--electric-color),
     transparent 60%
   );
-  opacity: 0.3;
-  filter: blur(15px);
-  animation: electric-pulse calc(var(--electric-speed, 3s) * 0.5) ease-in-out infinite alternate;
+  opacity: 0.15;
+  /* Убрали тяжелый blur */
 }
 
 .electric-border-light__content {
@@ -58,23 +56,19 @@
   }
 }
 
-@keyframes electric-pulse {
-  0% {
-    opacity: 0.2;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 0.4;
-    transform: scale(1.05);
-  }
-}
-
-/* Hover effect */
+/* Hover effect - анимация только при hover */
 .electric-border-light:hover .electric-border-light__glow {
-  opacity: 1;
-  animation-duration: calc(var(--electric-speed, 3s) * 0.5);
+  opacity: 0.8;
+  animation: electric-slide var(--electric-speed, 3s) linear infinite;
 }
 
 .electric-border-light:hover .electric-border-light__glow::before {
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+/* Отключаем анимации для пользователей с prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .electric-border-light__glow {
+    animation: none !important;
+  }
 }

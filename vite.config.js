@@ -24,7 +24,6 @@ export default defineConfig({
         manualChunks: {
           "react-vendor": ["react", "react-dom"],
           "animation-vendor": ["gsap", "framer-motion", "lenis"],
-          "three-vendor": ["three", "postprocessing"],
         },
       },
     },
@@ -37,8 +36,6 @@ export default defineConfig({
       "gsap",
       "framer-motion",
       "lenis",
-      "three",
-      "postprocessing",
     ],
   },
 });

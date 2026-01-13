@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import GridScan from '../GridScan';
 import './Hero.css';
 
 export default function Hero() {
@@ -68,20 +67,6 @@ export default function Hero() {
 
   return (
     <section ref={sectionRef} className='hero' id='hero'>
-      {/* GridScan Effect */}
-      <GridScan
-        sensitivity={0.55}
-        lineThickness={1}
-        linesColor='#392e4e'
-        gridScale={0.1}
-        scanColor='#7A33FF'
-        scanOpacity={0.4}
-        enablePost
-        bloomIntensity={0.6}
-        chromaticAberration={0.002}
-        noiseIntensity={0.01}
-      />
-
       {/* Animated background */}
       <div ref={bgRef} className='hero__background'>
         <div className='hero__bg-circle hero__bg-circle--1' />
